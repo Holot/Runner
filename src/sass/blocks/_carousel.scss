@@ -1,0 +1,21 @@
+.carousel{
+    position: relative;
+    padding: 81px 0;
+    &__inner{
+        width: 750px;
+        margin: 0 auto;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        background-image: url(../icons/chevron-left-solid.png);
+        width: 31px;
+        height: 50px;
+        position: relative;
+        left: -120px;
+    }
+    
+    .carousel-control-next-icon{
+        background-image: url(../icons/chevron-right-solid.png);
+        left: 120px;
+    }
+}
+

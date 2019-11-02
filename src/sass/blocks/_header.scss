@@ -28,3 +28,21 @@
         display: block;
     }
 }
+
+
+@media(max-width: 991px){
+    .header{
+        &__official{
+            text-align: right;
+        }
+        &__phone{
+            font-size: 15px;
+        }
+    }
+}
+
+@media(max-width: 576px){
+    .mobile_hide{
+        display: none;
+    }
+}

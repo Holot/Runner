@@ -1,18 +1,5 @@
-.assorti{
-    &__img{
-        width: 140px;
-        display: block;
-        margin: 0 auto;
-    }
-    &__shoplink{
-        font-size: 14px;
-        font-weight: 500;
-        text-align: center;
-        color: #c70101;
-        display: block;
-        text-transform: uppercase;
-        text-decoration: underline;
-    }
+.catalog{
+    padding-bottom: 103px;
 }
 
 .nav-tabs{
@@ -24,6 +11,7 @@
     width: 220px;
     height: 50px;
     margin-right: 20px;
+    cursor: pointer !important;
 
     transform: skew(-20deg);
     a{
@@ -35,8 +23,15 @@
         text-transform: uppercase;
     }
 }
+.nav-tabs .nav-item:hover{
+    border: none;
+    box-shadow: 3px 3px 5px $main-color;
+}
 .nav-link{
     padding-top: 11px;
+}
+.nav-link:hover{
+    border: none;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-item{
     border: 1px solid #dee2e6;  
@@ -55,7 +50,7 @@
 }
 
 .card-deck{
-    margin-top: 59px;
+    margin-top: 39px;
 }
 
 .card-deck .card{

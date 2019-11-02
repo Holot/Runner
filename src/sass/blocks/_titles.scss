@@ -11,3 +11,11 @@
         color: #ffffff;
     }
 }
+
+@media(max-width: 576px){
+    .title{
+        &_left{
+            font-size: 31px;
+        }
+    }
+}

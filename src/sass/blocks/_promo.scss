@@ -52,3 +52,10 @@
         }
     }
 }
+
+@media(max-width: 576px){
+    .promo{
+        min-height: 610px;
+        padding-bottom: 30px;
+    }
+}

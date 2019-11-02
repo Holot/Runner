@@ -1,18 +1,17 @@
-$(document).ready(function(){
-    $('.carousel__inner').slick({
-        speed: 1200,
-        adaptiveHeight: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="icons/chevron-left-solid.png"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="icons/chevron-right-solid.png"></button>',
-        responsive: [
-            {
-              breakpoint: 992,
-              settings: {
-                dots: true,
-                arrows: false
-              }
-            }
-          ]
-      });
-  });
-          
+$(".hrm__shoplink").each(function(i){
+	$(this).on('click', function(e){
+		toggleSlide(i, e);
+	});
+});
+
+$(".hrm__back").each(function(i){
+	$(this).on('click', function(e){
+		toggleSlide(i, e);
+	});
+});
+
+function toggleSlide(i, e){
+	e.preventDefault();
+	$(".hrm__additionalinfo").eq(i).toggleClass("hrm__hide", 500);
+	$(".hrm__info").eq(i).toggleClass("hrm__hide", 500);
+};

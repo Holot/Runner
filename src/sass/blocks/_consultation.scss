@@ -10,3 +10,12 @@
         color: #ffffff;
     }
 }
+
+@media(max-width: 576px){
+    .consultation{
+        padding: 70px 20px;
+        &__descr{
+            margin-top: 60px;
+        }
+    }
+}

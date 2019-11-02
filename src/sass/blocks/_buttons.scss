@@ -20,3 +20,11 @@
         font-size: 14px;
     }
 }
+
+@media(max-width: 1024px){
+    .button{
+        &_buy{
+            width: 91px;
+        }
+    }
+}

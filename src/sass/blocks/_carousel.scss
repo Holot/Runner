@@ -20,6 +20,10 @@
     .carousel-indicators{
         display: none;
     }
+    .carousel-inner{
+        width: 85%;
+        margin: 0 auto;
+    }
 }
 
 @media(max-width: 991px){
@@ -31,7 +35,6 @@
     }
     .carousel-inner{
         width: 95%;
-        margin: 0 auto;
     }
 }
 

@@ -9,7 +9,7 @@
     <title>Pulse</title>
 </head>
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="container">
             <header class="header">
                 <div class="col-md-3 offset-xl-1">
@@ -17,7 +17,7 @@
                         <img src="images/RunSmart_logo.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-5 col-lg-4 mobile_hide">
+                <div class="col-md-5 offset-lg-1 col-lg-4 mobile_hide">
                     <div class="header__official">
                         Официальный представитель
                         <span>Garmin, Polar, Suunto</span>
@@ -26,7 +26,7 @@
                 <div class="col-md-3 col-xl-2 offset-lg-1">
                     <div class="header__contacts">
                         <a href="tel:+74999228974 " class="header__phone">+7 (499) 922-89-74</a>
-                        <button class="button float-right mt-1">заказать звонок</button>
+                        <button class="button float-right mt-1" type="button" data-toggle="modal" data-target="#callModal">заказать звонок</button>
                     </div>
                 </div>
             </header>
@@ -39,7 +39,7 @@
                         <div class="promo__icon"><img src="icons/delivery.png" alt=""><p>Бесплатная доставка</p></div>
                         <div class="promo__icon"><img src="icons/messages.png" alt=""><p>Ответим на все вопросы</p></div>
                     </div>
-                    <button class="button button_main">заказать консультацию</button>
+                    <button class="button button_main" type="button" data-toggle="modal" data-target="#buyModal">заказать консультацию</button>
                     <div class="promo__link">
                         или
                         <a href="#catalog">перейти в каталог</a>
@@ -100,12 +100,12 @@
                 </div>
 
                 <div class="col-md-4 offset-lg-1">
-                    <form class="feed_form" action="#">
+                    <form class="feed-form" action="#" id="mainPageForm">
                         <input name="name" required placeholder="Ваше имя" type="text">
-                        <input name="phone" required placeholder="Ваш телефон" type="tel">
-                        <input name="email" required placeholder="Ваш email" type="email">
+                        <input name="phone" required minlength="6" placeholder="Ваш телефон" type="tel">
+                        <input name="email" required minlength="4" placeholder="Ваш email" type="email">
 
-                        <button class="button button_main">заказать консультацию</button>
+                        <button class="button button_main" data-toggle="modal" data-target="#thanksModal">Заказать консультацию</button>
                     </form>
                 </div>
             </div>
@@ -184,7 +184,7 @@
                                         <p class="hrm__oldprice">4 750 руб.</p>
                                         <p class="hrm__newprice">4 500 руб.</p>
                                     </div>
-                                    <button class="button button_buy">Купить</button>
+                                    <button class="button button_buy" type="button" data-toggle="modal" data-target="#buyModal" data-whatever="Пульсометр Polar FT1">Купить</button>
                                 </div>
                             </div>
                             <div class="card hrm">
@@ -210,7 +210,7 @@
                                         <p class="hrm__oldprice">4 750 руб.</p>
                                         <p class="hrm__newprice">4 500 руб.</p>
                                     </div>
-                                    <button class="button button_buy">Купить</button>
+                                    <button class="button button_buy" type="button" data-toggle="modal" data-target="#buyModal" data-whatever="Пульсометр Polar FT1">Купить</button>
                                 </div>
                             </div>
                             <div class="card hrm">
@@ -236,7 +236,7 @@
                                         <p class="hrm__oldprice">4 750 руб.</p>
                                         <p class="hrm__newprice">4 500 руб.</p>
                                     </div>
-                                    <button class="button button_buy">Купить</button>
+                                    <button class="button button_buy" type="button" data-toggle="modal" data-target="#buyModal" data-whatever="Пульсометр Polar FT1">Купить</button>
                                 </div>
                             </div>
 
@@ -263,7 +263,7 @@
                                         <p class="hrm__oldprice">4 750 руб.</p>
                                         <p class="hrm__newprice">4 500 руб.</p>
                                     </div>
-                                    <button class="button button_buy">Купить</button>
+                                    <button class="button button_buy" type="button" data-toggle="modal" data-target="#buyModal" data-whatever="Пульсометр Polar FT1">Купить</button>
                                 </div>
                             </div>
                             <div class="card hrm">
@@ -289,7 +289,7 @@
                                         <p class="hrm__oldprice">4 750 руб.</p>
                                         <p class="hrm__newprice">4 500 руб.</p>
                                     </div>
-                                    <button class="button button_buy">Купить</button>
+                                    <button class="button button_buy" type="button" data-toggle="modal" data-target="#buyModal" data-whatever="Пульсометр Polar FT1">Купить</button>
                                 </div>
                             </div>
                             <div class="card hrm">
@@ -315,7 +315,7 @@
                                         <p class="hrm__oldprice">4 750 руб.</p>
                                         <p class="hrm__newprice">4 500 руб.</p>
                                     </div>
-                                    <button class="button button_buy">Купить</button>
+                                    <button class="button button_buy" type="button" data-toggle="modal" data-target="#buyModal" data-whatever="Пульсометр Polar FT1">Купить</button>
                                 </div>
                             </div>
                         </div>
@@ -384,10 +384,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-
+          
     <footer class="footer">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1737.0267448501186!2d37.64624047364648!3d55.76831563990905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sua!4v1559894689029!5m2!1sru!2sua" width="100%" height="630" frameborder="0" style="border:0" allowfullscreen></iframe>        
         <div class="footer__info">
@@ -400,9 +399,67 @@
             </div>
         </div>
     </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <a href="#up" class="pageup"><img src="icons/up-chevron-button.png" alt=""></a>
+
+    <!-- modal for call -->
+    <div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModallLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <h5 class="modal-title " id="callModallLabel">Просто заполните форму заявки<br> 
+                        <span>и мы перезвоним вам в течении 10 минут</span></h5>
+                </div>
+                <div class="modal-body d-block m-auto">
+                    <form class="feed-form mt-0" action="#" id="modalCallForm">
+                        <input name="name" required placeholder="Ваше имя" type="text">
+                        <input name="phone" required minlength="6" placeholder="Ваш телефон" type="tel">
+                        <input name="email" required placeholder="Ваш email" type="email">
+
+                        <button class="button button_main">заказать консультацию</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for buy -->
+    <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <h5 class="modal-title" id="buyModalLabel">Ваш заказ<br> 
+                        <span class="modal-title-span">Товар</span></h5>
+                </div>
+                <div class="modal-body d-block m-auto">
+                    <form class="feed-form mt-0" action="#" id="modalBuyForm">
+                        <input name="name" required placeholder="Ваше имя" type="text">
+                        <input name="phone" required minlength="6" placeholder="Ваш телефон" type="tel">
+                        <input name="email" required placeholder="Ваш email" type="email">
+
+                        <button class="button button_buy" type="button" data-toggle="modal" data-target="#thanksModal">Купить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for thanks -->
+    <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-block p-4">
+                    <h5 class="modal-title" id="thanksModalLabel">Спасибо за вашу заявку<br> 
+                        <span class="modal-title-span">Наш менеджер свяжется с вами 
+                                в ближайшее время!</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="js/scipts.js"></script>
 </body>
 </html>
